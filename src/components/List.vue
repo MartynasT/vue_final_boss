@@ -5,13 +5,7 @@
           v-for="(giveaway, index) in allGiveaways"
           :key="index" :giveawayInfo="giveaway"
       />
-
-
-
     </div>
-
-
-
 
     <div class="pagination">
       <span
@@ -38,11 +32,6 @@ export default {
   components: {
     Giveaway_card,
   },
-  // mounted() {
-  //   if (this.$store.state.giveawaysPerPage.length <= 1){
-  //     this.$store.dispatch('getGiveawaysPerPage', 10)
-  //   }
-  // },
   computed:{
 
     allGiveaways(){
@@ -61,15 +50,7 @@ export default {
       return this.$route.params.page
     },
   },
-  // created () {
-  //   let page = this.$route.params.page
-  //   let count = page * 10
-  //   this.$store.dispatch('getAllGiveawaysFromApi', count);
-  //   // let page = this.$route.params.page
-  //   // // alert(page)
-  //   // let count = page * 10
-  //   // this.$store.dispatch('getGiveawaysPerPage', count)
-  // },
+
   methods:{
     goToPage(page){
       let count = page * 10
@@ -86,11 +67,7 @@ export default {
       }
       this.$store.dispatch('getGiveawaysPerPage', count)
     }
-    // allGiveaways: function(value){
-    //   console.log('watcher: ', value)
-    //   // let count = value * 10
-    //   // this.$store.dispatch('getGiveawaysPerPage', count)
-    // }
+
   }
 }
 </script>

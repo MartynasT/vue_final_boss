@@ -22,13 +22,7 @@ export default {
       count = page * 10
     }
 
-
-
     this.$store.dispatch('getAllGiveawaysFromApi', count);
-    // let page = this.$route.params.page
-    // // alert(page)
-    // let count = page * 10
-    // this.$store.dispatch('getGiveawaysPerPage', count)
   },
 
 }

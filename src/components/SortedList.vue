@@ -1,7 +1,6 @@
 <template>
   <div>
     <h1>Sorted list</h1>
-<!--    {{sortedGiveawaysList}}-->
     <Giveaway_card
         v-for="(giveaway, index) in sortedGiveawaysList"
         :key="index" :giveawayInfo="giveaway"
